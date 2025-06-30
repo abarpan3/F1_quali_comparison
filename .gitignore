@@ -1,0 +1,29 @@
+# Ignore environment variables
+.env
+
+# Ignore Python cache & ipynb files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+
+# Ignore Streamlit cache
+.cache/
+.cache/*
+
+# Ignore FastF1 cache
+db.sqlite3
+cache/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files
+*.tmp
+*.log 
