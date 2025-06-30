@@ -84,14 +84,14 @@ if event_name:
         img = Image.open(tmp_path)
         if short:
             analysis_prompt = """
-Based on the provided lap data graphs comparing the drivers at [Insert Specific Race Track Name], generate a concise summary (approximately 5 lines in bullet style) providing specific insights into their performance differences. The Lap data graphs show the speed as well as the time difference between the two drivers. Additionally, the graphs show the vertical lines for the corner numbers.
+Based on the provided lap data graphs comparing the drivers at [Insert Specific Race Track Name], generate a concise summary (approximately 3 lines in bullet style) providing specific insights into their performance differences. The Lap data graphs show the speed as well as the time difference between the two drivers. Additionally, the graphs show the vertical lines for the corner numbers.
 
 Include:
     1.  The overall faster driver and the final time difference.
     2.  Specific lap segments or cornering phases where the faster driver gained significantly, inferred from speed traces and time differences (e.g., "gained notably in low-speed sections," "excelled in high-speed corners," or "stronger acceleration out of turns").
     3.  Any specific areas where the slower driver demonstrated relative strength or minimized losses (e.g., "maintained parity on straights," or "showed competitive braking into certain turns").
 
-Focus on actionable, data-driven observations within the length constraint, identifying performance characteristics. Assume a basic knowledge of the track layout and its typical corner speeds for a more in-depth analysis.
+Focus on actionable, data-driven observations within the length constraint, identifying performance characteristics from the graphs. Present your findings clearly, referencing specific corners from the graphs where relevant. Assume a basic knowledge of the track layout and its typical corner speeds for a more in-depth analysis.
 """
         else:
             analysis_prompt = """
