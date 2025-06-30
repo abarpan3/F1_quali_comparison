@@ -1,12 +1,13 @@
 # Ignore environment variables
 .env
+*.ipynb
 
 # Ignore Python cache & ipynb files
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.ipynb
+
 
 # Ignore Jupyter Notebook checkpoints
 .ipynb_checkpoints/
