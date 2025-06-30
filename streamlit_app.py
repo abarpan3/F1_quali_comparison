@@ -86,10 +86,19 @@ if event_name:
             analysis_prompt = """
 Based on the provided lap data graphs comparing the drivers at [Insert Specific Race Track Name], generate a concise summary (approximately 3 lines in bullet style) providing specific insights into their performance differences. The Lap data graphs show the speed as well as the time difference between the two drivers. Additionally, the graphs show the vertical lines for the corner numbers.
 
-Include:
-    1.  The overall faster driver and the final time difference.
-    2.  Specific lap segments or cornering phases where the faster driver gained significantly, inferred from speed traces and time differences (e.g., "gained notably in low-speed sections," "excelled in high-speed corners," or "stronger acceleration out of turns").
-    3.  Any specific areas where the slower driver demonstrated relative strength or minimized losses (e.g., "maintained parity on straights," or "showed competitive braking into certain turns").
+Your analysis should break down their performance into distinct phases of the lap, correlating the 'Speed in km/h' graph with the 'Time Difference' graph. Specifically, identify and discuss:
+
+1.  **Overall Performance:** Who is consistently faster and by how much at the end of the lap?
+2.  **Major Gain Zones (Driver A):** Where does Driver A make their most significant time gains (i.e., where does the time difference line steepen most dramatically in their favor)? For each zone, infer the contributing factors based on the speed trace (e.g., better braking, higher minimum speed through corners, stronger traction on exit). Categorize these gains by corner type (low-speed, medium-speed, high-speed) or straight-line performance.
+3.  **Major Gain Zones (Driver B):** Where does Driver B make their most significant time gains, or where do they best minimize their losses to Driver A? (If Driver B never gains, focus on areas where the time difference flattens or increases less rapidly). Infer contributing factors as above.
+4.  **Cornering Analysis:**
+    * **Low-Speed Corners:** Analyze performance in the slowest sections. Who demonstrates superior braking, corner entry, mid-corner speed, and exit traction?
+    * **Medium-Speed Corners:** How do they compare through the more flowing, technical medium-speed sections? Who carries more speed and maintains better rhythm?
+    * **High-Speed Corners:** Who shows better confidence and car stability through the fastest corners, indicated by higher minimum speeds and consistent acceleration?
+5.  **Straight-Line Speed & Braking:**
+    * Who appears to have superior straight-line speed (after corner exit and before braking)?
+    * Who demonstrates stronger braking performance into key corners (later braking points, better deceleration)?
+6.  **Car Characteristics/Driving Style Inferences:** Based on the analysis, what can you infer about the characteristics of each car (e.g., high downforce, low drag, good mechanical grip) or the driving style of each driver (e.g., aggressive on entry, smooth through corners, strong on traction)?
 
 Focus on actionable, data-driven observations within the length constraint, identifying performance characteristics from the graphs. Present your findings clearly, referencing specific corners from the graphs where relevant. Assume a basic knowledge of the track layout and its typical corner speeds for a more in-depth analysis.
 """
