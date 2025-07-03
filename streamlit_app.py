@@ -182,7 +182,7 @@ Present your findings clearly, referencing specific corners from the graphs wher
             fig.add_trace(
                 go.Scatter(
                     x=common_distance, y=d1_speed_interp,
-                    mode='lines', name=driver1_code, line=dict(color='#FF9E00'),
+                    mode='lines', name=driver1_code, line=dict(color='#FCCB06'),
                     hovertemplate=f"%{{y:.1f}} km/h",
                     customdata=[f"{t:.3f}" for t in d1_time_interp]
                 ),
@@ -191,7 +191,7 @@ Present your findings clearly, referencing specific corners from the graphs wher
             fig.add_trace(
                 go.Scatter(
                     x=common_distance, y=d2_speed_interp,
-                    mode='lines', name=driver2_code, line=dict(color='#0077B6', dash='dash'), opacity=0.7,
+                    mode='lines', name=driver2_code, line=dict(color='#B1DDF1', dash='dash'), opacity=0.7,
                     hovertemplate=f"%{{y:.1f}} km/h",
                     customdata=[f"{t:.3f}" for t in d2_time_interp]
                 ),
