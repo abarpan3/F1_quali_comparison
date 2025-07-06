@@ -33,7 +33,7 @@ event_schedule = get_event_schedule(year)
 event_schedule['Session5DateUtc'] = pd.to_datetime(event_schedule['Session5DateUtc'], utc=True)
 now = pd.Timestamp.now(tz='UTC')
 # Only include events whose 'Session5DateUtc' (the race) is in the past
-past_events = event_schedule[event_schedule['Session5DateUtc'] < now]
+past_events = event_schedule[event_schedule['Session5DateUtc'] <= now]
 event_names = past_events['EventName'].tolist()
 event_name = st.selectbox("Select Race", event_names)
 
